@@ -23,7 +23,6 @@ module.exports = {
         try {
             const decoded = jwt.verify(token, process.env.TOKEN_KEY);
 
-            req.user = decoded;
         } catch (err) {
             console.log('errrr', err);
             return res.status(401).send("Invalid Token123");
