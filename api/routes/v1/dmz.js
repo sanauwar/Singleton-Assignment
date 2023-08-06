@@ -6,7 +6,7 @@ module.exports = {
     enforce: function (req, res, next) {
         const unsecure_paths = [
             '/test',
-            '/user',
+            '/user/register',
             '/login'
         ];
 

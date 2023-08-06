@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
     try {
         const { email, password } = req.body
 
-        const user = await knex("users").where({ email: email }).first();
+        const user = await knex("user_t").where({ email: email }).first();
         if (!user) {
             res.status(404).send({
                 message: "User not found"
